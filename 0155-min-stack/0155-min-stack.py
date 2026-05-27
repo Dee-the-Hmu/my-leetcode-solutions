@@ -16,7 +16,7 @@ class MinStack(object):
             self.min_stack.append(val)
         else: 
             curr_min = self.min_stack[len(self.min_stack) - 1]
-            self.min_stack.append(curr_min)
+            self.min_stack.append(self.min_stack[len(self.min_stack) - 1])
         
 
     def pop(self):
