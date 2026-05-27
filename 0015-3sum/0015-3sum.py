@@ -9,6 +9,7 @@ match: sort + iteration + 2 ptrs
 plan: 
     create a list result = []
     1. iterate the nums 
+        ***skip repeating num start from index 1, if i > 0 and nums[i] == numsd[i-1]***
     2. for each num, index i, left = current index + 1, right = len(nums) - 1)
     3. while(left < right)
         curr_val = each_num + nums[left] + nums[right]
@@ -16,6 +17,7 @@ plan:
         if curr_val == target: 
             result.append([i, left, right])
             update left and right 
+            ***skip repeating left and right values***
         elif curr_val > target
             right -= 1 
         else curr_val < target
@@ -38,7 +40,7 @@ class Solution(object):
         result = [] 
         for i,num in enumerate(nums):
 
-            if i > 0 and nums[i] == nums[i-1]: #repeating 
+            if i > 0 and nums[i] == nums[i-1]: #repeating, i > 0 for case [0,0,0]
                 continue 
             left = i+1
             right = len(nums) - 1
