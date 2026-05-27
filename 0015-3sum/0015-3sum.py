@@ -15,6 +15,7 @@ plan:
 
         if curr_val == target: 
             result.append([i, left, right])
+            update left and right 
         elif curr_val > target
             right -= 1 
         else curr_val < target
@@ -36,6 +37,9 @@ class Solution(object):
 
         result = [] 
         for i,num in enumerate(nums):
+
+            if i > 0 and nums[i] == nums[i-1]: #repeating 
+                continue 
             left = i+1
             right = len(nums) - 1
             
@@ -44,10 +48,16 @@ class Solution(object):
 
                 if curr_val == 0: 
                     new_lst = [nums[i], nums[left], nums[right]]
-                    if new_lst not in result: 
-                        result.append(new_lst)
-                    left += 1
-                    right -= 1 
+                    result.append(new_lst)
+
+                    left += 1 
+                    right -= 1
+
+                    while(left < right and nums[left] == nums[left-1]):
+                        left += 1
+                    while(left < right and nums[right] == nums[right+1]):
+                        right -= 1 
+
                 elif curr_val > 0: 
                     right -= 1 
                 else: 
