@@ -43,5 +43,5 @@ class Solution(object):
                 elif token == "/":
                     stack.append(int(float(a) / b)) #truncate towards zero 
 
-        return int(stack.pop())
+        return stack.pop()
         
