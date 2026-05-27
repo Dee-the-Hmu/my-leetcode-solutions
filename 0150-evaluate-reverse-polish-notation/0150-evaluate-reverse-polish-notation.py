@@ -29,19 +29,19 @@ class Solution(object):
 
         for token in tokens: 
             if token.isdigit() or token.lstrip('-').isdigit(): # count -numbers as digit (strip - and is the remainder a digit?)
-                stack.append(token)
+                stack.append(int(token))
             else: 
-                b = int(stack.pop())
-                a = int(stack.pop())
+                b = stack.pop()
+                a = stack.pop()
 
                 if token == "+":
-                    stack.append(str(a + b))
+                    stack.append(a + b)
                 elif token == "-":
-                    stack.append(str(a - b))
+                    stack.append(a - b)
                 elif token == "*":
-                    stack.append(str(a * b))
+                    stack.append(a * b)
                 elif token == "/":
-                    stack.append(str(int(float(a) / b))) #truncate towards zero 
+                    stack.append(int(float(a) / b)) #truncate towards zero 
 
         return int(stack.pop())
         
