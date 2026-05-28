@@ -39,7 +39,7 @@ class Solution(object):
         answers = [0] * len(temperatures)
 
         for i,temp in enumerate(temperatures):
-            if not stack or temperatures[stack[len(stack) - 1]] > temp:
+            if not stack or temperatures[stack[len(stack) - 1]] >= temp:
                 stack.append(i)
                 continue
             
