@@ -75,22 +75,16 @@ class Solution(object):
                     best_substring = s[left:right+1]
                 # will remove the leftmost char
                 left_char = s[left]
-                if left_char in d and curr_d[left_char] <= d[left_char]: 
-                    have -= 1 
                 curr_d[left_char] -= 1 
+
+                if left_char in d and curr_d[left_char] < d[left_char]: 
+                    have -= 1 
+                
                 if curr_d[left_char] == 0:
                     del curr_d[left_char]
                 
                 left += 1 
                 if left < right: 
-                    left_char = s[left]
-                
-                while (left < right and left_char not in d):
-                    
-                    curr_d[left_char] -= 1 
-                    if curr_d[left_char] == 0: 
-                        del curr_d[left_char]
-                    left += 1
                     left_char = s[left]
                     
             right += 1
