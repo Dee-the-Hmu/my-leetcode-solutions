@@ -84,8 +84,6 @@ class Solution(object):
                     del curr_d[left_char]
                 
                 left += 1 
-                if left < right: 
-                    left_char = s[left]
                     
             right += 1
         return best_substring
