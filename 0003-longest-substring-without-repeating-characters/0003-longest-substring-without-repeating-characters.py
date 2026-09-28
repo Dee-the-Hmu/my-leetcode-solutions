@@ -1,22 +1,32 @@
 """
-U: 
-    input: a string "s" 
-    output: int (the len of the longest substring without duplicate characters)
+understand
+    INPUT: string s
+    output: longest substring w/o repeating character
 
-M: subtracting the repeating char from the set ****
-P: 
-    1. if s.len == 0: return 0, if 1, return 1
-    2. create a set, longest_len = 0, left_ptr = 0 
-    3. iterate s, for each char 
-        4. if curr_char not in s: 
-            5. add curr_char to the set 
-            6. if len(set) > longest_len, update longest len
-        7. else: 
-            while curr_char in s: 
-                set.remove(s[left_ptr])
-                left_ptr += 1 
-    8. return longest_len
+    edge case:
+        if empty, 0
+        if len==1, 1
 
+match: sliding window and a set 
+plan:
+    handle edge cases
+        max = 1
+    1. s_et = set()
+    2. s_et.add(s[0])
+    3. l = 0
+    4. iterate the string 
+        5. curr_char
+        6. while s_et and curr_char in s_et:
+            if len(s_et) > max
+                max = len(s_et)
+            s_et.remove(s[l])
+            l += 1
+
+        7. s_et.add(curr_char)
+    8. return max
+
+implement, review
+evaluate: O(n) time, O(n) space
 """
 
 class Solution(object):
@@ -25,25 +35,27 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        if len(s) == 0: 
+       
+
+        if not s:
             return 0
-        if len(s) == 1: 
-            return 1 
+        if len(s) == 1:
+            return 1
 
         s_et = set()
-        longest_substring_len = 0
-        left_ptr = 0
+        s_et.add(s[0])
+        max_len = 1
+        l = 0
+ 
+        for i in range(1, len(s)):
+            curr_char = s[i]
+            while s_et and curr_char in s_et:
+                if len(s_et) > max_len:
+                    max_len = len(s_et)
+                s_et.remove(s[l])
+                l += 1
 
-        for curr_char in s: 
-            if curr_char not in s_et:
-                s_et.add(curr_char)
-            else: # char in s 
-                while curr_char in s_et:
-                    s_et.remove(s[left_ptr])
-                    left_ptr += 1
-                s_et.add(curr_char)
-                
-            if len(s_et) > longest_substring_len: 
-                    longest_substring_len = len(s_et)
-
-        return longest_substring_len
+            s_et.add(curr_char)
+        
+        return max(max_len, len(s_et))
+        
