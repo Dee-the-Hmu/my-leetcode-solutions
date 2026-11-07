@@ -6,6 +6,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0039-combination-sum](https://github.com/Dee-the-Hmu/my-leetcode-solutions/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/Dee-the-Hmu/my-leetcode-solutions/tree/master/0040-combination-sum-ii) |
+| [0051-n-queens](https://github.com/Dee-the-Hmu/my-leetcode-solutions/tree/master/0051-n-queens) |
 | [0078-subsets](https://github.com/Dee-the-Hmu/my-leetcode-solutions/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/Dee-the-Hmu/my-leetcode-solutions/tree/master/0090-subsets-ii) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Dee-the-Hmu/my-leetcode-solutions/tree/master/0121-best-time-to-buy-and-sell-stock) |
@@ -77,6 +78,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0039-combination-sum](https://github.com/Dee-the-Hmu/my-leetcode-solutions/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/Dee-the-Hmu/my-leetcode-solutions/tree/master/0040-combination-sum-ii) |
+| [0051-n-queens](https://github.com/Dee-the-Hmu/my-leetcode-solutions/tree/master/0051-n-queens) |
 | [0078-subsets](https://github.com/Dee-the-Hmu/my-leetcode-solutions/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/Dee-the-Hmu/my-leetcode-solutions/tree/master/0090-subsets-ii) |
 | [0131-palindrome-partitioning](https://github.com/Dee-the-Hmu/my-leetcode-solutions/tree/master/0131-palindrome-partitioning) |
@@ -85,4 +87,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0078-subsets](https://github.com/Dee-the-Hmu/my-leetcode-solutions/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/Dee-the-Hmu/my-leetcode-solutions/tree/master/0090-subsets-ii) |
+## Algorithm X
+|  |
+| ------- |
+| [0051-n-queens](https://github.com/Dee-the-Hmu/my-leetcode-solutions/tree/master/0051-n-queens) |
 <!---LeetCode Topics End-->
